@@ -41,7 +41,7 @@
             color: #ff4d4d;
             font-size: 16px;
         }
-        img, video {
+        img, iframe {
             width: 100%;
             max-width: 250px;
             height: auto;
@@ -61,6 +61,8 @@
             transition: 0.3s;
             width: 100%;
             max-width: 200px;
+            display: block;
+            margin: auto;
         }
         button:hover {
             background-color: #b30000;
@@ -93,7 +95,6 @@
     <div id="page2" class="container">
         <h2>🎉HAPPY BIRTHDAY!!🎉</h2>
         <h2>POPPY AMELIA NURBAIQ</h2>
-        <p><P>
         <p>SEMOGA DIUMUR 19 TAHUN INI KAMU SELALU BAHAGIA.</p>
         <p>KARENA KAMU ADALAH ORANG YANG HEBAT</p>
         <span class="heart">💗💗💗</span>
@@ -101,21 +102,46 @@
         <img src="https://i.postimg.cc/yxw0S34d/AS003471-00.gif" alt="Forever Love">
         <br>
         <button onclick="goToPage(3)">Lanjut</button>
+        <button onclick="goToPage(1)">Kembali</button>
     </div>
 
-    <!-- Halaman 3 (Video) -->
+    <!-- Halaman 3 - Video -->
     <div id="page3" class="container">
         <h2>🎥 You Are Still The One 🎥</h2>
-       <iframe width="240" height="135" src="https://youtube.com/embed/izGgIHKQN8o" frameborder="0" allowfullscreen></iframe>
+        <iframe width="240" height="135" src="https://youtube.com/embed/izGgIHKQN8o" frameborder="0" allowfullscreen></iframe>
         <br>
         <button onclick="goToPage(4)">Lanjut</button>
+        <button onclick="goToPage(2)">Kembali</button>
     </div>
 
-    <!-- Halaman 4 (GIF dan Terima Kasih) -->
+    <!-- Halaman 4 - GIF dan Terima Kasih -->
     <div id="page4" class="container">
         <h2>🎉 I MISS YOU 🎉</h2>
         <p>Kenapa Ga Terima?? Bodoamat nyenye</p>
-        <img src="https://i.postimg.cc/vHZNMpXS/8xf09f9880-1.webp" alt="wleee"> <!-- Pastikan file GIF ada di folder yang sama -->
+        <img src="https://i.postimg.cc/vHZNMpXS/8xf09f9880-1.webp" alt="wleee">
+        <br>
+        <button onclick="goToPage(5)">Lanjut</button>
+        <button onclick="goToPage(3)">Kembali</button>
+    </div>
+
+    <!-- Halaman 5 - Logo Surat Cinta -->
+    <div id="page5" class="container">
+        <h2>💌 Surat Cinta Untukmu 💌</h2>
+        <p>Klik surat di bawah ini untuk melihat isi suratnya.</p>
+        <br>
+        <a href="#" onclick="goToPage(6)">
+            <img src="https://i.postimg.cc/QCZxTjV0/love-letter.png" alt="Surat Cinta">
+        </a>
+        <br>
+        <button onclick="goToPage(4)">Kembali</button>
+    </div>
+
+    <!-- Halaman 6 - Isi Surat -->
+    <div id="page6" class="container">
+        <h2>💖 Surat Untukmu 💖</h2>
+        <p>Hai sayangku, aku hanya ingin mengingatkan betapa berharganya kamu di hidupku. Aku berharap kamu selalu bahagia dan mendapatkan semua yang terbaik di dunia ini. Terima kasih sudah menjadi bagian dari hidupku! 💕</p>
+        <br>
+        <button onclick="goToPage(5)">Kembali</button>
     </div>
 
     <script>
