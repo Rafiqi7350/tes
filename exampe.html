@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertanyaan Romantis</title>
+  <style>
+    /* Reset dasar untuk margin dan padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffe6f2;
+      color: #d6336c;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: linear-gradient(to top right, #ffb3d9, #ff80ab);
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px; /* Memperbesar font h1 */
+      color: #ff3366;
+      margin-bottom: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 1px 1px 5px rgba(255, 80, 171, 0.8);
+      text-align: center; /* Menjaga posisi tetap di tengah */
+    }
+
+    p {
+      font-size: 20px; /* Memperkecil ukuran font p */
+      margin-top: 10px;
+      color: #ff5e7b;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center; /* Menjaga posisi tetap di tengah */
+    }
+
+    .button {
+      background-color: #ff80ab;
+      color: #fff;
+      font-size: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #ff3366;
+      transform: scale(1.1);
+    }
+
+    .message {
+      font-size: 50px;
+      margin-top: 30px;
+      font-family: 'Courier New', Courier, monospace;
+      color: #ff5e7b;
+      text-shadow: 2px 2px 5px rgba(255, 80, 171, 0.8);
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .heart {
+      font-size: 120px;
+      color: #ff3366;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="question">Ikan ikan apa yang cantik dan gemesin?</h1>
+    <div id="choices">
+      <button class="button" onclick="showMessage()">Ikan Cupang</button>
+      <button class="button" onclick="showMessage()">Ikan Bebek</button>
+    </div>
+    <div id="romantic-message" class="message">
+      <h1>iiikan kamuuu</h1>
+      <p>xixixi maaf gajelas, soalnya kan yang jelas kamu nanti jadi milikku</p>
+      <div class="heart">💖</div>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      // Hide question and choices
+      document.getElementById('question').style.display = 'none';
+      document.getElementById('choices').style.display = 'none';
+      
+      // Show the romantic message with animation
+      const message = document.getElementById('romantic-message');
+      message.style.display = 'block';
+      setTimeout(function() {
+        message.style.opacity = 1;
+      }, 10); // Adds smooth fade-in effect
+    }
+  </script>
+
+</body>
+</html>
