@@ -21,6 +21,15 @@
             padding: 20px;
             position: relative;
         }
+        body::before {
+            content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+            font-size: 50px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.3;
+        }
         .container {
             display: none;
             background: rgba(255, 255, 255, 0.9);
@@ -50,34 +59,24 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .button-container {
+        .button-group {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
         button {
-            padding: 10px 15px;
+            padding: 8px 16px;
             font-size: 14px;
             cursor: pointer;
-            border: none;
-            border-radius: 15px;
-            transition: 0.3s;
-            width: 45%;
-            max-width: 150px;
-        }
-        .next {
             background-color: #ff4d4d;
             color: white;
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s;
+            width: 45%;
         }
-        .next:hover {
+        button:hover {
             background-color: #b30000;
-        }
-        .back {
-            background-color: #4d79ff;
-            color: white;
-        }
-        .back:hover {
-            background-color: #0033cc;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -86,63 +85,62 @@
     </style>
 </head>
 <body>
+
+    <!-- Halaman 1 -->
     <div id="page1" class="container active">
         <h2>HAII NURBAIQQ</h2>
         <p>This is Special For You</p>
         <br>
         <img src="https://i.postimg.cc/66ZBN4jm/gif1.gif" alt="Love Image">
         <br>
-        <div class="button-container">
-            <button class="next" onclick="goToPage(2)">Lanjut</button>
+        <div class="button-group">
+            <button onclick="goToPage(2)">Lanjut</button>
         </div>
     </div>
+
+    <!-- Halaman 2 -->
     <div id="page2" class="container">
         <h2>🎉HAPPY BIRTHDAY!!🎉</h2>
+        <h2>POPPY AMELIA NURBAIQ</h2>
         <p>SEMOGA DIUMUR 19 TAHUN INI KAMU SELALU BAHAGIA.</p>
+        <p>KARENA KAMU ADALAH ORANG YANG HEBAT</p>
         <br>
         <img src="https://i.postimg.cc/yxw0S34d/AS003471-00.gif" alt="Forever Love">
         <br>
-        <div class="button-container">
-            <button class="back" onclick="goToPage(1)">Kembali</button>
-            <button class="next" onclick="goToPage(3)">Lanjut</button>
+        <div class="button-group">
+            <button onclick="goToPage(1)">Kembali</button>
+            <button onclick="goToPage(3)">Lanjut</button>
         </div>
     </div>
+
+    <!-- Halaman 3 (Video) -->
     <div id="page3" class="container">
         <h2>🎥 You Are Still The One 🎥</h2>
-        <iframe width="240" height="135" src="https://youtube.com/embed/izGgIHKQN8o" frameborder="0" allowfullscreen></iframe>
+       <iframe width="240" height="135" src="https://youtube.com/embed/izGgIHKQN8o" frameborder="0" allowfullscreen></iframe>
         <br>
-        <div class="button-container">
-            <button class="back" onclick="goToPage(2)">Kembali</button>
-            <button class="next" onclick="goToPage(4)">Lanjut</button>
+        <div class="button-group">
+            <button onclick="goToPage(2)">Kembali</button>
+            <button onclick="goToPage(4)">Lanjut</button>
         </div>
     </div>
+
+    <!-- Halaman 4 (GIF dan Terima Kasih) -->
     <div id="page4" class="container">
         <h2>🎉 I MISS YOU 🎉</h2>
         <p>Kenapa Ga Terima?? Bodoamat nyenye</p>
         <img src="https://i.postimg.cc/vHZNMpXS/8xf09f9880-1.webp" alt="wleee">
         <br>
-        <div class="button-container">
-            <button class="back" onclick="goToPage(3)">Kembali</button>
-            <button class="next" onclick="goToPage(5)">Lanjut</button>
+        <div class="button-group">
+            <button onclick="goToPage(3)">Kembali</button>
         </div>
     </div>
-    <div id="page5" class="container">
-        <h2>💌 Surat Cinta 💌</h2>
-        <p>Klik surat ini untuk membaca pesanku</p>
-        <br>
-        <a href="love_letter.html">
-            <img src="https://i.postimg.cc/d3mV8N3J/love-letter.png" alt="Surat Cinta">
-        </a>
-        <br>
-        <div class="button-container">
-            <button class="back" onclick="goToPage(4)">Kembali</button>
-        </div>
-    </div>
+
     <script>
         function goToPage(pageNumber) {
             document.querySelector('.active').classList.remove('active');
             document.getElementById('page' + pageNumber).classList.add('active');
         }
     </script>
+
 </body>
 </html>
